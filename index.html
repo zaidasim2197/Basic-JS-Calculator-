@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAID's CALCULATOR</title>
+</head>
+<body>
+    
+    <style>
+        .sumsub{
+            display: flex;
+        }
+        .muldiv{
+            display:flex;
+        }
+        .sum{
+            margin-right: 16%;
+        }
+        .mul{
+            margin-right: 11%;
+            margin-top: 8%;
+
+        }
+        .divi{
+            margin-top: 8%;
+
+        }
+        .sub{
+            margin-left: 1%;
+
+        }
+
+        .main{
+            margin-left: 22%;
+        }
+    </style>
+<hr><hr>
+<h1 style="background-color: rgb(193, 193, 249); text-align: center;"><u> "ZAID's BASIC CALCULATOR" </u></h1>
+<hr><hr><br>
+<div class="main">
+<div class="sumsub">
+    <div class="sum">
+    <form onsubmit="doSum() ; return false"> 
+        num1: <input id="num1" type="number"><br>
+        num2: <input id = "num2" type="number"><br>
+        <button type="submit">Add (+)</button>
+<div style="border: 2px dotted;padding : -200px; background-color: rgb(193, 193, 249);"><h4 id="result"> The Sum Of Two Numbers Is:   </h4></div>
+        
+        
+    </form> 
+</div>
+
+<br><br>
+<div class="sub">
+    <form onsubmit="doSub() ; return false"> 
+        num1: <input id="n1" type="number"><br>
+        num2: <input id = "n2" type="number"><br>
+        <button type="submit">Subtract (-) </button>
+        <div style="border: 2px dotted;padding : -200px;  background-color: rgb(193, 193, 249);"><h4 id="ans"> The Difference Of Two Numbers Is:   </h4></div>
+        
+        
+    </form>
+</div>
+</div>
+<div class="muldiv">
+
+<br><br>
+<div class="mul">
+    <form onsubmit="doMultiply() ; return false"> 
+        num1: <input id="no1" type="number"><br>
+        num2: <input id = "no2" type="number"><br>
+        <button type="submit">Multiply (*) </button>
+        <div style="border: 2px dotted;padding : -200px;  background-color: rgb(193, 193, 249);"><h4 id="equal"> The Multiplication Of Two Numbers Is:   </h4>
+        
+        </div>
+    </form>
+</div>
+
+<br><br>
+<div class="divi ">
+    <form onsubmit="doDivision() ; return false"> 
+        num1: <input id="number1" type="number"><br>
+        num2: <input id = "number2" type="number"><br>
+        <button type="submit">Divide (/) </button>
+        <div style="border: 2px dotted;padding : -200px;  background-color: rgb(193, 193, 249);"><h4 id="cal"> The Division Of Two Numbers Is:   </h4>
+        
+        </div>
+
+    </form>
+</div>
+</div>
+</div><br>
+<hr><hr>
+<script>
+    alert("Welcome To Zaid's Calculator"); 
+       function doSum(){
+        let Firstnumber = Number(document.querySelector("#num1").value)
+        let Secondnumber = +document.querySelector("#num2").value
+        console.log(Firstnumber,Secondnumber);
+        let sum = Firstnumber + Secondnumber;
+
+document.querySelector("#result").innerHTML = sum;
+       }
+
+
+       function doSub(){
+        let Firstnumber = Number(document.querySelector("#n1").value)
+        let Secondnumber = document.querySelector("#n2").value
+        console.log(Firstnumber,Secondnumber);
+        let Subtract = Firstnumber - Secondnumber;
+
+document.querySelector("#ans").innerHTML = Subtract;
+       }
+
+
+
+       function doMultiply(){
+        let Firstnumber = Number(document.querySelector("#no1").value)
+        let Secondnumber = document.querySelector("#no2").value
+        console.log(Firstnumber,Secondnumber);
+        let Multiply = Firstnumber * Secondnumber;
+
+document.querySelector("#equal").innerHTML = Multiply;
+       }
+
+
+       function doDivision(){
+        let Firstnumber = Number(document.querySelector("#number1").value)
+        let Secondnumber = document.querySelector("#number2").value
+        console.log(Firstnumber,Secondnumber);
+        let Divide = Firstnumber / Secondnumber;
+
+document.querySelector("#cal").innerHTML = Divide;
+       }
+
+    </script>
+</body>
+</html>
